@@ -1,0 +1,162 @@
+:root {
+    --main-background:#090b1a;
+    --card-background:#1b1938;
+    --accent:#aa5cdb;
+    --white:#ffffff;
+    --white-paragraph:hsla(0, 0%, 100%, 0.75);
+    --white-stat:hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, Lexend Deca;
+    font-size: 15px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background);
+    overflow: hidden;
+}
+
+main {
+    width: 250px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--card-background);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.img-div{
+    height: 30%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#purple {
+    width:100%;
+    position: absolute;
+    background-color: #c062fa;
+    mix-blend-mode:multiply;
+    height:100%;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+img {
+   width: 100%;
+   z-index: 0;
+   position: relative;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15%;
+}
+
+.title {
+    width: 70%;
+    font-size: 1.2rem;
+    margin-bottom: -2px;
+    font-weight: 700;
+    margin-top: 10%;
+}
+
+#accent {
+    color: var(--accent)
+}
+
+p {
+    color: var(--white-paragraph);
+}
+
+#subtitle {
+    font-family: Inter;
+    font-size: 0.7rem;
+    width: 75%;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.stats h1{
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: -5%;
+}
+
+.stats p{
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 400;
+    font-family: Lexend Deca;
+    letter-spacing: 0.1rem;
+}
+
+
+
+@media (min-width: 800px) {
+    main {
+        flex-direction: row;
+        width: 700px;
+        height: 300px;
+    }
+
+    .img-div {
+        order: 2;
+        height: 100%;
+        width:50%;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        transform: scale(1.25);
+        position: relative;
+    }
+
+
+    .text {
+        align-items: flex-start;
+        justify-content:space-between;
+        text-align: left;
+        width:50%;
+        margin-left: 40px;
+        margin-bottom: 0;
+    }
+
+    #subtitle {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        width:80%;
+        margin-bottom:10px;
+        margin-top:0;
+    }
+
+    .stats {
+        display: flex;
+                
+    }
+
+    .stats div{
+        margin-right: 15%;
+    }
+
+    
+} 
+
